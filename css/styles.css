@@ -18,6 +18,16 @@ ul, li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
   color: #333;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  height: 150px;
+  width: 80px;
+  background-color: #3397db;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 a {
