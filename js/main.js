@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
+  /* tab index changes*/
+  document.getElementById('map').tabIndex = -1;
+  document.getElementById("tab-skip").addEventListener('click', function() {
+    getElementsByTagName("li")[0].focus();
+  });
 });
 
 /**
@@ -199,6 +204,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
