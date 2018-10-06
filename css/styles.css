@@ -58,6 +58,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: block;
 }
 
+label {
+  color: white;
+  font-size: 15px;
+}
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;

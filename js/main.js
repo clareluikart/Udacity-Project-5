@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
   /* tab index changes*/
   document.getElementById('map').tabIndex = -1;
-  document.getElementById("tab-skip").addEventListener('click', function() {
-    getElementsByTagName("li")[0].focus();
-  });
 });
 
 /**
