@@ -6,11 +6,6 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
-  document.getElementById('map').setAttribute('tabIndex', '-1');
-  document.getElementById('map').tabIndex = -1;
-  console.log(document.getElementById('map').getAttribute('tabIndex'));
-  console.log(document.getElementById('map'));
-  console.log(document.getElementById('map').getAttribute('tabIndex'));
 });
 
 /**
