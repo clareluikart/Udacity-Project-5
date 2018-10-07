@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   /* tab index changes*/
   document.getElementById('map').tabIndex = -1;
 });
-
+registerServiceWorker = function() {
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('js/sw.js').then(function(reg) {
+      console.log('yay');
+    }).catch(function(err) {
+      console.log('boo');
+    });
+  }
+};
+registerServiceWorker();
 /* Restaurant objects and hard coding them */
 
 /**
