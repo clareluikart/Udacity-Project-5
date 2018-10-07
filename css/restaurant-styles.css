@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/*help with getting map to display at width: 100%; provided by Vasudeva Ram Pavan Kumar Pitta
+on Slack and Google Hangouts*/
 /* CSS Document */
 body, td, th, p {
   font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +15,8 @@ body {
   margin: 0;
   position: relative;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 ul, li {
@@ -110,19 +114,20 @@ nav h1 a {
 /* Display list items side by side */
 #breadcrumb li {
   display: inline;
+  color: white;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
   padding: 8px;
-  color: black;
+  color: white;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-  color: #0275d8;
   text-decoration: none;
+  color: white;
 }
 
 /* Add a color on mouse-over */
@@ -274,6 +279,7 @@ nav h1 a {
 
 #restaurant-address {
   font-size: 12pt;
+  width: 100%
 }
 
 #restaurant-cuisine {
@@ -300,6 +306,8 @@ nav h1 a {
 
 #restaurant-container {
   margin-top: 64px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #reviews-container {
@@ -342,23 +350,23 @@ nav h1 a {
 }
 
 @media screen and (max-width: 555px) {
+  #restaurant-container, #reviews-container {
+    width: 90%;
+  }
+
   #restaurant-container {
+    margin-top: 464px;
     order: 1;
-    width: 100%;
   }
 
   #reviews-container {
     order: 2;
+  }
+
+  .inside #map-container {
     width: 100%;
-  }
-
-  #map-container, #map {
-    order: 0;
-  }
-
-  nav, #restaurant-container, #reviews-container, #map-container, #map {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    position: absolute;
+    height: 400px;
+    z-index: 100;
   }
 }
