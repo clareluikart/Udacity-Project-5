@@ -352,7 +352,13 @@ nav h1 a {
     width: 100%;
   }
 
-  #map-container {
-    width: 100%;
+  #map-container, #map {
+    order: 0;
+  }
+
+  nav, #restaurant-container, #reviews-container, #map-container, #map {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
