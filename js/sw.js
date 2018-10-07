@@ -1,3 +1,4 @@
+// modified from Lesson 13: Introducing the Service Worker
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('restaurant-stage-1').then(function(cache) {
