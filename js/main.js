@@ -16,14 +16,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /* Restaurant objects and hard coding them */
-function Restaurant(imageUrl, name, neighborhood, address, imgDescription) {
-  this.imageUrlForRestaurant = imageUrl;
-  this.name = name;
-  this.neighborhood = neighborhood;
-  this.address = address;
-  this.imgDescription = imgDescription;
-}
-restaurants.push(new Restaurant("img/1.jpg", "Chez Penny Fine Dining", "Brooklyn", "550 Greene Avenue, Brooklyn, NY 11216", "intricate dining room"));
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -172,12 +164,10 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
-  image.src = restaurant.imageUrlForRestaurant;
-  image.classList.add("restaurant-thumbnail");
+  image.className = 'restaurant-thumbnail';
+  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name;
   li.append(image);
-  image.alt = restaurant.imgDescription;
-
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
