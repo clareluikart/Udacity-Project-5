@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 registerServiceWorker = function() {
   if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('js/sw.js').then(function(reg) {
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
       console.log('yay');
     }).catch(function(err) {
       console.log('boo');
@@ -178,7 +178,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt = restaurant.name;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 

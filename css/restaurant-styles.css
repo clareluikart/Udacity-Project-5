@@ -307,7 +307,7 @@ nav h1 a {
 #restaurant-container {
   margin-top: 64px;
   margin-bottom: 10px;
-  text-align: center;
+  justify-content: center;
 }
 
 #reviews-container {

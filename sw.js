@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('restaurant-stage-1').then(function(cache) {
       return cache.addAll([
-        '/'
+        '*'
       ]);
     })
   );
