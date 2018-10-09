@@ -1,5 +1,6 @@
 // modified from Lesson 13: Introducing the Service Worker
 // and https://developers.google.com/web/fundamentals/primers/service-workers/#cache_and_return_requests
+var CACHE_NAME='version1'; //also explained to me by Vasudeva Pitta!
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('restaurant-stage-1').then(function(cache) {
@@ -13,16 +14,17 @@ self.addEventListener('install', function(event) {
         '/js/dbhelper.js',
         '/js/main.js',
         '/js/restaurant_info.js',
+        //added img files at suggestion of Vasudeva Pitta
         '/img/1.jpg',
-'/img/2.jpg',
-'/img/3.jpg',
-'/img/4.jpg',
-'/img/5.jpg',
-'/img/6.jpg',
-'/img/7.jpg',
-'/img/8.jpg',
-'/img/9.jpg',
-'/img/10.jpg',
+        '/img/2.jpg',
+        '/img/3.jpg',
+        '/img/4.jpg',
+        '/img/5.jpg',
+        '/img/6.jpg',
+        '/img/7.jpg',
+        '/img/8.jpg',
+        '/img/9.jpg',
+        '/img/10.jpg'
       ]);
     })
   );
